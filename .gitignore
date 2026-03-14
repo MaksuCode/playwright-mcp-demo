@@ -3,3 +3,7 @@ dist/
 db.json
 *.log
 .env
+
+
+/reports
+/.playwright-mcp
