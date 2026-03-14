@@ -1,15 +1,15 @@
 import { Page } from 'playwright';
 
-export class LoginPage {
+export class RegisterPage {
   readonly emailInput = this.page.locator('[data-testid="email-input"]');
   readonly passwordInput = this.page.locator('[data-testid="password-input"]');
-  readonly loginButton = this.page.locator('[data-testid="login-button"]');
-  readonly errorMessage = this.page.locator('[data-testid="error-message"]');
+  readonly confirmPasswordInput = this.page.locator('[data-testid="confirm-password-input"]');
+  readonly registerButton = this.page.locator('[data-testid="register-button"]');
 
   constructor(private page: Page) {}
 
   async navigate(): Promise<void> {
-    await this.page.goto('/login.html');
+    await this.page.goto('/register.html');
   }
 
   async fillEmail(email: string): Promise<void> {
@@ -20,12 +20,11 @@ export class LoginPage {
     await this.passwordInput.fill(password);
   }
 
-  async clickLogin(): Promise<void> {
-    await this.loginButton.click();
+  async fillConfirmPassword(password: string): Promise<void> {
+    await this.confirmPasswordInput.fill(password);
   }
 
-  async getErrorMessage(): Promise<string> {
-    await this.errorMessage.waitFor({ state: 'visible' });
-    return (await this.errorMessage.textContent()) ?? '';
+  async clickRegister(): Promise<void> {
+    await this.registerButton.click();
   }
 }
