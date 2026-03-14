@@ -21,8 +21,9 @@ npx cucumber-js     # run BDD tests with Cucumber
 ## Project Structure
 
 ```
-src/                  # Express backend (TypeScript)
-public/               # Frontend (vanilla HTML/CSS/JS)
+src/
+  ├── backend/        # Express backend (TypeScript)
+  └── frontend/       # Frontend (vanilla HTML/CSS/JS)
 tests/
   ├── bdd/
   │   ├── features/         # Cucumber feature files

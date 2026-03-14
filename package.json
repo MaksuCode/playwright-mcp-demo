@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Local e-commerce demo app for Playwright MCP test automation",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only backend/src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/backend/src/index.ts",
     "build": "tsc",
     "seed": "node scripts/seed.js",
     "test": "playwright test",
