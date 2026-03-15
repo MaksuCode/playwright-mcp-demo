@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "email": "test@test.com",
+      "passwordHash": "$2a$10$wKvM0YdKQBx7yDxRZegPIOGRGYPrrVy/Kms.ehIv9QMc7QDP6/O.W",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "products": [
+    { "id": "p1", "name": "Wireless Headphones", "category": "electronics", "price": 79.99, "stock": 50, "description": "Over-ear noise-cancelling headphones." },
+    { "id": "p2", "name": "Mechanical Keyboard", "category": "electronics", "price": 129.99, "stock": 30, "description": "Tenkeyless layout with tactile switches." },
+    { "id": "p3", "name": "USB-C Hub", "category": "electronics", "price": 39.99, "stock": 100, "description": "7-in-1 hub with HDMI, USB-A, and SD card." },
+    { "id": "p4", "name": "Running T-Shirt", "category": "apparel", "price": 24.99, "stock": 200, "description": "Moisture-wicking athletic tee." },
+    { "id": "p5", "name": "Yoga Pants", "category": "apparel", "price": 49.99, "stock": 150, "description": "High-waist stretch pants, 4-way flex." }
+  ],
+  "carts": [],
+  "orders": []
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart — ShopDemo</title>
+  <style>
+    body { font-family: sans-serif; max-width: 720px; margin: 0 auto; padding: 16px; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; border-bottom: 1px solid #eee; padding-bottom: 12px; }
+    .cart-item { display: flex; align-items: center; gap: 12px; border: 1px solid #ddd; border-radius: 6px; padding: 12px; margin-bottom: 12px; }
+    .cart-item span[data-testid="item-name"] { flex: 1; font-weight: 600; }
+    .cart-item span[data-testid="item-price"] { color: #0070f3; min-width: 60px; }
+    .cart-item input[data-testid="item-quantity"] { width: 60px; padding: 4px; border: 1px solid #ccc; border-radius: 4px; text-align: center; }
+    .cart-item button { padding: 6px 10px; border: none; border-radius: 4px; cursor: pointer; }
+    button[data-testid^="update-quantity"] { background: #0070f3; color: #fff; }
+    button[data-testid^="remove-item"] { background: #e00; color: #fff; }
+    .footer { margin-top: 24px; display: flex; justify-content: space-between; align-items: center; }
+    [data-testid="cart-total"] { font-size: 1.3rem; font-weight: 700; }
+    button[data-testid="checkout-button"] { padding: 10px 24px; background: #0070f3; color: #fff; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
+    button[data-testid="checkout-button"]:disabled { background: #aaa; cursor: not-allowed; }
+    [data-testid="empty-cart-message"] { display: none; color: #666; font-style: italic; }
+    [data-testid="order-success-message"] { display: none; padding: 16px; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 6px; color: #155724; margin-top: 16px; }
+    .user-info { display: flex; gap: 12px; align-items: center; }
+    button[data-testid="logout-button"] { padding: 6px 12px; background: #eee; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/index.html">ShopDemo</a> &rsaquo; Cart</h1>
+    <div class="user-info">
+      <span data-testid="user-email"></span>
+      <button data-testid="logout-button">Logout</button>
+    </div>
+  </header>
+
+  <div data-testid="cart-items"></div>
+  <div data-testid="empty-cart-message">Your cart is empty. <a href="/index.html">Continue shopping</a></div>
+
+  <div class="footer">
+    <span>Total: <span data-testid="cart-total">$0.00</span></span>
+    <button data-testid="checkout-button" disabled>Checkout</button>
+  </div>
+
+  <div data-testid="order-success-message">
+    Your order has been placed successfully! <a href="/index.html">Continue shopping</a>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/cart.js"></script>
+</body>
+</html>
