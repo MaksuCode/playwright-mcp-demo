@@ -70,7 +70,7 @@ document.querySelector('[data-testid="checkout-button"]').addEventListener('clic
     await apiFetch('/api/orders', { method: 'POST' });
     document.querySelector('[data-testid="cart-items"]').innerHTML = '';
     document.querySelector('[data-testid="cart-total"]').textContent = '$0.00';
-    document.querySelector('[data-testid="empty-cart-message"]').style.display = 'none';
+    document.querySelector('[data-testid="empty-cart-message"]').style.display = 'block';
     document.querySelector('[data-testid="checkout-button"]').disabled = true;
     document.querySelector('[data-testid="order-success-message"]').style.display = 'block';
   } catch (err) {
